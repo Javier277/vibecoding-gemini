@@ -2,18 +2,17 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
-describe("Fase 0 · Esqueleto de la aplicación", () => {
-  it("muestra el nombre de la app correctamente", () => {
+describe("Fase 1 · Mapa Base de la Comunitat Valenciana", () => {
+  it("muestra el encabezado con el título y el badge de Fase 1", () => {
     render(<Home />);
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading).toBeDefined();
-    expect(heading.textContent).toContain("Control de Flota y Rutas · Comunitat Valenciana");
+    expect(heading.textContent).toContain("Control de Flota y Rutas");
+    expect(screen.getByText("Fase 1 · Mapa Base")).toBeDefined();
   });
 
-  it("muestra la información de los 14 autobuses y GPS simulado", () => {
+  it("muestra la información de base operativa y flota de 14 autobuses", () => {
     render(<Home />);
-    expect(screen.getByText("14")).toBeDefined();
-    expect(screen.getByText("Autobuses en flota")).toBeDefined();
-    expect(screen.getByText("GPS Live")).toBeDefined();
+    expect(screen.getByText("Base: Vara de Quart")).toBeDefined();
+    expect(screen.getByText("14 buses")).toBeDefined();
   });
 });

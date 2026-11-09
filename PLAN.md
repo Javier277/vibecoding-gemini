@@ -22,12 +22,12 @@ El agente trabaja una fase cada vez y marca las casillas al cerrarla.
 **Objetivo:** Integrar el mapa interactivo de Leaflet centrado en la Comunitat Valenciana con el marcador base de las cocheras centrales. *(Fase lo más pequeña y atómica posible)*.
 
 **Tareas:**
-- [ ] Integrar Leaflet y OpenStreetMap (sin necesidad de claves de API).
-- [ ] Renderizar el mapa centrado en Valencia y la Comunitat Valenciana con controles de zoom y navegación.
-- [ ] Mostrar un marcador inicial en las Cocheras Centrales de la flota (Polígono Vara de Quart).
+- [x] Integrar Leaflet y OpenStreetMap (sin necesidad de claves de API).
+- [x] Renderizar el mapa centrado en Valencia y la Comunitat Valenciana con controles de zoom y navegación.
+- [x] Mostrar un marcador inicial en las Cocheras Centrales de la flota (Polígono Vara de Quart).
 
 **Pruebas:**
-- Prueba automática que comprueba que el componente del mapa se monta sin errores y contiene las coordenadas base de la Comunitat.
+- Prueba automática que comprueba que el componente del mapa se monta sin errores y contiene las coordenadas base de la Comunitat. (Comprobado: 4 pruebas pasadas con Vitest).
 
 **Hecho cuando:** Al abrir la app en el navegador se muestra el mapa interactivo cargando las teselas de OpenStreetMap y el marcador de la base de cocheras.
 **Cómo comprobarlo:** Abrir `http://localhost:3000`, mover y hacer zoom sobre el mapa de la Comunitat Valenciana y pulsar sobre el marcador de "Cocheras Centrales".
